@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mamama's Living Room</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+
+</head>
+
+<body>
+	<a-scene renderer="antialias: true;">
+	
+		<a-assets>
+			<img id="sky" src="images/sunny.jpeg" crossorigin="anonymous" />
+			<img id="mosaic" src="images/Mosaico.png" crossorigin="anonymous" />
+			<img id="crate" src="images/crate.jpg" crossorigin="anonymous" />
+			<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
+			<img id="hexagons" src="images/hexagons.png" crossorigin="anonymous" />
+			<img id="rug" src="images/rug.jpeg" crossorigin="anonymous" />
+			<img id="wall" src="images/wall.jpeg" crossorigin="anonymous" />
+			<img id="picture" src="images/pintura.jpeg" crossorigin="anonymous" />
+			<img id="pot" src="images/pot.png" crossorigin="anonymous" />
+			<img id="clock" src="images/clock.jpeg" crossorigin="anonymous" />
+			<img id="soccer" src="images/soccer.jpeg" crossorigin="anonymous" />
+			<img id="garden" src="images/garden.webp" crossorigin="anonymous" />
+			<img id="berry" src="images/berry.jpeg" crossorigin="anonymous" />
+			<img id="couch" src="images/couch.jpeg" crossorigin="anonymous" />
+		</a-assets>
+			
+		<a-sky 
+			color = "#FFFFFF"
+			material = "src: #sky">
+		</a-sky>
+
+		<a-plane
+			width="50" height="50"
+			position=" 0.00 0.00 0" 
+			rotation="-90 0 0" 
+			color="#888888" 
+			material="src: #mosaic; repeat: 25 25" 
+			shadow="cast: false; receive: true">
+		</a-plane>
+
+		<a-plane
+			width="20" height="15"
+			position=" 0.00 0.00 0" 
+			rotation="0 0 0" 
+			color="#white" 
+			material="src: #wall; repeat: 1 1 " 
+			shadow="cast: false; receive: true">
+		</a-plane>
+
+		<a-plane
+			width="8" height="8"
+			position=" 2 2 0" 
+			rotation="0 0 0" 
+
+			material="src: #garden; repeat: 1 1 " 
+			shadow="cast: false; receive: true">
+		</a-plane>
+
+		<a-plane
+			width="20" height="15"
+			position=" -5 -2.5 5" 
+			rotation="180 -90 90" 
+			color="#white" 
+			material="src: #wall; repeat: 1 1 " 
+			shadow="cast: false; receive: true">
+		</a-plane>
+
+		<a-plane
+			width="8" height="3"
+			position=" 2 0.00 2" 
+			rotation="-90 0 0" 
+			color="#888888" 
+			material="src: #rug; repeat: 1 1" 
+			shadow="cast: false; receive: true">
+		</a-plane>
+
+		<a-box
+			width="6" height=".5" depth="1"			
+			position=" 2 1.5 .75" 
+			rotation="-90 0 0" 
+			color="#brown" 
+			material="src: #couch; repeat: 4 1" 
+			shadow="cast: false; receive: true">
+		</a-box>
+
+		<a-box
+			width="6" height="1" depth="1"
+			position=" 2 .5 1" 
+			rotation="0 0 0" 
+			color="#brown" 
+			material="src: #couch; repeat: 4 1" 
+			shadow="cast: false; receive: true"
+			roughness=".5">
+		</a-box>
+
+	<a-plane
+		width="1" height="1"
+		position=" 8 3 0" 
+		rotation="0 0 0" 
+		color="#bc6833" 
+		material="src: #crate; repeat: 1 1 " 
+		shadow="cast: false; receive: true">
+	</a-plane>
+
+	<a-plane
+		width=".75" height=".75"
+		position=" 8 3 0" 
+		rotation="0 0 0" 
+		material="src: #picture; repeat: 1 1 " 
+		shadow="cast: false; receive: true">
+	</a-plane>
+
+	<a-circle
+		radius=".75"
+		position=" -2.8 3 0" 
+		rotation="0 0 0" 
+		material="src: #clock; repeat: 1 1 " 
+		shadow="cast: false; receive: true">
+	</a-circle>
+		
+
+		
+		<a-sphere
+			radius = ".3"
+			position = "8 .25 2"
+			material = "src: #soccer; repeat: 2"
+			shadow = "cast: true; receive: true">
+		</a-sphere>
+		
+		<a-cylinder
+			radius = "0.3" height = "1"
+			position = "-2.5 0 1"
+			color = "brown"
+			material = "src: #pot; repeat: 4 2;"
+			shadow = "cast: true; receive: true">
+		</a-cylinder>
+
+		<a-cylinder
+		radius = "0.25" height = "1"
+		position = "-2.5 0 1"
+		color = "brown"
+		material = "src: #earth; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+		<a-cylinder
+		radius = "0.35" height = ".15"
+		position = "-2.5 0.35 1"
+		color = "light-brown"
+		material = "src: #pot; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+	<a-cylinder
+		radius = "0.05" height = "3.65"
+		position = "-2.5 0.35 1"
+		color = "light-brown"
+		material = "src: #berry; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+	<a-sphere
+		radius = ".3"
+		position = "-2.75 2 1"
+		material = "src: #berry; repeat: 1"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+
+	<a-sphere
+		radius = ".3"
+		position = "-2.25 1.5 1"
+		material = "src: #berry; repeat: 1"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+		
+	<a-sphere
+		radius = ".3"
+		position = "-2.75 1 1"
+		material = "src: #berry; repeat: 1"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+
+	</a-scene>
+</body>
+</html>
