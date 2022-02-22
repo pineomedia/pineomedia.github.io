@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look At This</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+
+<body>
+  
+    <a-scene antialias="true">
+	
+        <a-assets>
+            <img id="sky" src="images/sky.jpg" crossorigin="anonymous" />
+                <img id="bedroom" src="images/bedroom.jpeg" crossorigin="anonymous" />
+                <img id="construction" src="images/construction.jpg" crossorigin="anonymous" />
+                <img id="living_room" src="images/living_room.jpeg" crossorigin="anonymous" />
+                <img id="patio" src="images/patio.jpg" crossorigin="anonymous" />
+        </a-assets>
+		
+        <a-sky 
+            color = "#FFFFFF"
+            material = "src: #sky">
+        </a-sky>
+        
+        <a-entity
+            gltf-model="models/bedroom.glb"
+            position="-2 2 -2"
+            scale=".8 .8 .8"     
+            rotation="0 45 0"
+            value="Nine O'Clock"
+            align="center"
+            event-set__enter="_event: mouseenter; _target: a-sky; material.src: #bedroom"      
+        ></a-entity>  
+
+        <a-entity
+            gltf-model="models/construction.glb"
+            position="2 2 -2"
+            scale=".8 .8 .8" 
+            rotation="0 -45 0"
+            value="Three O'Clock"
+            align="center"
+            event-set__enter="_event: mouseenter; _target: a-sky; material.src: #construction"      
+        ></a-entity> 
+
+        <a-entity
+            gltf-model="models/living_room.glb"
+            position="0 2 2.5"
+            scale=".2 .2 .2" 
+            rotation="0 180 0"
+            value="Six O'Clock"
+            align="center"
+            event-set__enter="_event: mouseenter; _target: a-sky; material.src: #living_room"     
+        ></a-entity> 
+
+        <a-entity
+            gltf-model="models/bench.glb"
+            position="2 2 2.5"
+            scale=".8 .8 .8" 
+            rotation="0 0 0"
+            value="Twelve O'Clock"
+            align="center"
+            event-set__enter="_event: mouseenter; _target: a-sky; material.src: #patio"     
+        ></a-entity> 
+
+        <a-camera>
+            <a-cursor color=#ff77ff></a-cursor>
+        </a-camera>
+        
+    </a-scene>
+    
+</body>
+</html>
